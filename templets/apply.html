@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Apply{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid py-3 mb-3">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            
+            </div>
+        </div>
+    </div>
+</div>
+<h1 class="text-center"><b>Join Us</b></h1>
+<hr>
+<p>Are you a talented developer looking to join an innovative team?
+     Obvious Solutions is always on the lookout for passionate individuals who are eager to 
+     contribute to our mission. Whether you're a Java developer, Android developer, React developer,
+      Python developer, C++ developer, or Flutter developer, we welcome your expertise and enthusiasm.</p>
+<p>At Obvious Solutions, we believe in turning the complex into the obvious. Contact us today,
+         and let's embark on a journey of innovation and success together.</p>
+    <p>Obvious Solutions - Where Innovation Meets Excellence.</p>
+<hr>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        p{
+            width: 100%;
+            text-align: center;
+            
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .contact-form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-form">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email:</label>
+                    <input type="Email" id="Email" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="Phone">Mobile Number:</label>
+                    <input type="text" id="Phone" name="Phone" required>
+                </div><br>
+                <div>
+                    <b>Plese Attach your Resume:</b><br>
+                    <label for="resume">Choose Your Resume:</label>
+                    <input type="file" id="resume" name="resume" required ><br>
+                    
+                </div><br>
+                
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            
+            </form>
+        </div>
+    </div>
+
+ 
+{% endblock body %}

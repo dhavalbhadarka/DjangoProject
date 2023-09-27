@@ -1,0 +1,123 @@
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock title %}  | Obvious Solutions</title>
+    <link rel="shortcut icon" href="/static/img/mainlogo.jpg" type="image/x-icon">
+    {% comment %} <link rel = "web-icon" type="jpg"
+    href="/static/img/logo1.jpg"> {% endcomment %}
+    <style>
+      .nav-link:hover{
+        background-color: #EF2F5E;
+        border-radius: 40px;
+        
+      }
+      .dropdown-item:hover{
+        background-color: #539af7;
+        
+      }
+
+      nav{
+        background: #fff;
+        border-radius: 40px;
+        padding: 15px;
+        box-shadow: 0 25px 20px -20px rgba(0,0,0,0.4);
+      }
+      
+     
+
+       /*Footer */
+      
+       /* Apply this CSS to your footer */
+       
+
+
+     
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/index"><img src="/static/img/mainlogo.jpg" width="30" height="30">&nbsp;&nbsp;<span style="color:#FD4D64"><b>Obvious</b></span>&nbsp;<b>Solutions</b></a></a>
+
+
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index">Home </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Career
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="apply/">Python Developer</a>
+                <a class="dropdown-item" href="apply/">Android Developer</a>
+                {% comment %} <div class="dropdown-divider"></div> {% endcomment %}
+                <a class="dropdown-item" href="apply/">React Developer</a>
+                <a class="dropdown-item" href="apply/">Java Developer</a>
+                <a class="dropdown-item" href="apply/">C++ Developer</a>
+                <a class="dropdown-item" href="apply/">Flutter Developer</a>
+
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
+          </ul>
+          {% comment %} <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> {% endcomment %}
+        </div>
+      </nav>
+
+      {% comment %} <div class="card">
+       
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">Someone famous in </footer>
+          </blockquote>
+        </div>
+      </div> {% endcomment %}
+      {% comment %} <footer>
+        <p class= "text-center bg-dark text-light my-0 py-3 fixed-bottom">Copyright &copy; 2023 | All rights reserved</p>
+          </footer> {% endcomment %}
+      {% if success %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Success:</strong> Thank you for contact us. We will reach you as soon as possible
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      {% endif %}
+
+     
+     
+{% block body %}
+
+{% endblock body %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
